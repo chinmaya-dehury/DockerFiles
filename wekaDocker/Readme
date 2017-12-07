@@ -4,11 +4,13 @@
 # run the following command 
 #     sudo docker run -it --rm \
 #          -v /tmp/.X11-unix:/tmp/.X11-unix \
-#          -e DISPLAY=unix$DISPLAY 
-#          --name weka
+#          -e DISPLAY=unix$DISPLAY \
+#      	   -v $HOME/weka:/home/weka \ 	
+#          --name weka \
 #          weka_docker
 
 # If any error occur related to "Gtk-WARNING **: cannot open display: :1"
 # execute the following command 
 #         xhost +local:docker
 
+**NOTE: Before running the docker run command, make sure that weka folder exist inside $HOME directory
